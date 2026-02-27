@@ -13,13 +13,19 @@
   name: (constructor_name) @AlabasterDefinition) 
 
 (function name: (identifier) @AlabasterDefinition) 
+
 (let pattern: (identifier) @AlabasterDefinition
      value: (anonymous_function))
 
 (constant name: (identifier) @AlabasterDefinition) 
 
 ;; Disable highlight on _*
-(discard) @AlabasterBase
-(hole) @AlabasterBase
+[(discard) (hole)] @AlabasterBase
+
+;; use arrow, str concat, pattern matching alternative case, etc.
+["<-" "<>" "|"  "!=" "!"] @AlabasterPunctuation
 
 (escape_sequence) @AlabasterConstant
+
+((constructor_name) @AlabasterConstant
+  (#eq? @AlabasterConstant "Nil"))
