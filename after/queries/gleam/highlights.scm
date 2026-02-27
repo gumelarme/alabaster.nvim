@@ -23,7 +23,7 @@
 [(discard) (hole)] @AlabasterBase
 
 ;; use arrow, str concat, pattern matching alternative case, etc.
-["<-" "<>" "|"  "!=" "!"] @AlabasterPunctuation
+["<-" "<>" "|"  "!=" "!"] @AlabasterPunct
 
 (escape_sequence) @AlabasterConstant
 
