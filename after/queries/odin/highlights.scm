@@ -5,8 +5,8 @@
   (identifier) @AlabasterDefinition)
 
 (enum_declaration 
-  ((identifier) @AlabasterDefinition
-   (identifier)* @AlabasterBase))
+  (identifier) @AlabasterDefinition
+  (identifier)+ @AlabasterConstant)
 
 (struct_declaration 
   (identifier) @AlabasterDefinition)
@@ -21,7 +21,7 @@
   (identifier) @AlabasterDefinition)
 
 (overloaded_procedure_declaration
-  ((identifier) @AlabasterDefinition
-   (identifier)* @AlabasterBase))
+  (identifier) @AlabasterDefinition
+  (identifier)* @AlabasterBase)
 
 (escape_sequence) @AlabasterConstant
